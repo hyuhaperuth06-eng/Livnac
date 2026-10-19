@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081323">
+<title>LIVNAC — Ideas in. Real progress out.</title>
+<style>
+:root{--bg:#07111f;--panel:#0e1b2d;--panel2:#12243a;--line:#24364c;--text:#f3f8ff;--muted:#9eb1c9;--blue:#3988ff;--cyan:#77ddff;--soft:#d9f4ff;--good:#6ee7b7;--danger:#ff8f9b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#112d50 0%,transparent 38%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:100vh}.sidebar{padding:25px 16px;border-right:1px solid var(--line);background:rgba(5,13,25,.8);display:flex;flex-direction:column;gap:26px}.brand{display:flex;align-items:center;gap:11px;padding:0 8px}.mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#7deaff,#2883ff 62%,#1760d6);display:grid;place-items:center;color:#071323;font-size:26px;font-weight:900;box-shadow:0 8px 25px #1688ff38}.brand-name{font-weight:800;letter-spacing:.19em;font-size:16px}.brand-tag{font-size:10px;color:var(--muted);margin-top:3px}.nav-label{font-size:10px;letter-spacing:.18em;color:#7187a3;padding:0 11px;margin-bottom:8px}.nav{display:grid;gap:5px}.nav button{border:1px solid transparent;background:transparent;color:#b5c6db;text-align:left;padding:11px 12px;border-radius:11px;display:flex;gap:11px;align-items:center}.nav button:hover,.nav button.active{background:#132942;border-color:#244565;color:white}.nav .ico{width:19px;text-align:center;color:var(--cyan)}.side-note{margin-top:auto;border:1px solid var(--line);background:linear-gradient(150deg,#10223a,#0a1525);padding:14px;border-radius:15px}.side-note strong{font-size:12px}.side-note p{font-size:11px;color:var(--muted);line-height:1.6;margin:7px 0 0}.side-bottom{font-size:10px;color:#7187a3;padding:0 8px}.main{min-width:0;padding:28px clamp(16px,4vw,48px) 54px;max-width:1500px;width:100%;margin:0 auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:36px}.crumb{color:var(--muted);font-size:12px}.top-actions{display:flex;gap:9px}.btn{border:1px solid var(--line);background:#12243a;color:var(--text);padding:10px 14px;border-radius:10px;font-weight:650;font-size:12px;transition:.18s}.btn:hover{transform:translateY(-1px);border-color:#4e8ac9}.btn.primary{background:linear-gradient(110deg,#4b98ff,#54d2f0);border:0;color:#061322;box-shadow:0 8px 24px #3988ff28}.btn.ghost{background:transparent}.mobile-brand{display:none}.hero{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:25px}.eyebrow{font-size:10px;letter-spacing:.22em;color:var(--cyan);text-transform:uppercase;font-weight:800;margin-bottom:12px}.hero h1{font-size:clamp(30px,4.2vw,48px);letter-spacing:-.045em;line-height:1.07;margin:0;max-width:650px}.hero p{color:var(--muted);line-height:1.65;font-size:14px;max-width:570px;margin:14px 0 0}.hero-orb{width:92px;height:92px;flex:none;border-radius:28px;background:radial-gradient(circle at 30% 20%,#9af0ff,#3988ff 48%,#122c54 75%);box-shadow:0 0 70px #3988ff25;position:relative;transform:rotate(-8deg)}.hero-orb:after{content:"L";position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-size:62px;color:#061323;transform:rotate(8deg)}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0}.stat{border:1px solid var(--line);border-radius:15px;background:linear-gradient(140deg,#11223a,#0b1728);padding:17px}.stat .label{color:var(--muted);font-size:11px}.stat .number{font-size:27px;font-weight:750;letter-spacing:-.04em;margin-top:8px}.stat .sub{color:#7f98b5;font-size:10px;margin-top:4px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:30px 0 14px}.section-head h2{font-size:16px;margin:0;letter-spacing:-.02em}.section-head p{font-size:11px;color:var(--muted);margin:5px 0 0}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.project-card{border:1px solid var(--line);background:linear-gradient(145deg,#112239,#0b1727);border-radius:16px;padding:17px;min-width:0}.project-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.project-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:#173a5a;font-size:17px}.pill{font-size:10px;color:#a9dfff;border:1px solid #315b7a;background:#132c43;padding:5px 8px;border-radius:999px;white-space:nowrap}.project-card h3{font-size:15px;margin:14px 0 6px;overflow-wrap:anywhere}.project-card p{font-size:12px;color:var(--muted);line-height:1.5;margin:0;min-height:36px;overflow-wrap:anywhere}.progress-row{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin:15px 0 7px}.track{height:5px;border-radius:99px;background:#23364b;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#3988ff,#77ddff);border-radius:99px;transition:width .2s}.card-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:15px}.text-btn{background:transparent;border:0;color:#8bdcff;font-size:11px;font-weight:700;padding:6px 0}.empty{border:1px dashed #2b4059;border-radius:15px;padding:28px;text-align:center;color:var(--muted);font-size:12px;grid-column:1/-1}.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.quick{border:1px solid var(--line);border-radius:14px;background:#0d1b2c;padding:15px 12px;text-align:left;color:var(--text)}.quick:hover{border-color:#428bd1;background:#12263d}.quick .qicon{font-size:20px}.quick strong{display:block;font-size:12px;margin:9px 0 5px}.quick span{display:block;font-size:10px;line-height:1.5;color:var(--muted)}.view{display:none}.view.active{display:block}.backline{margin-bottom:18px}.detail-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin:10px 0 20px}.detail-head h1{font-size:clamp(26px,4vw,38px);margin:0;overflow-wrap:anywhere}.detail-head p{color:var(--muted);font-size:13px;line-height:1.6}.detail-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:15px}.panel{border:1px solid var(--line);background:linear-gradient(145deg,#102139,#0b1728);border-radius:16px;padding:18px;min-width:0}.panel h2{font-size:14px;margin:0 0 15px}.task-list{display:grid;gap:9px}.task{display:flex;align-items:flex-start;gap:10px;border:1px solid #24364a;border-radius:11px;padding:12px;background:#0c1929}.task input{accent-color:#55bfff;margin-top:3px;width:15px;height:15px;flex:none}.task label{font-size:12px;line-height:1.5;flex:1;overflow-wrap:anywhere}.task.done label{color:#7f96b0;text-decoration:line-through}.task .remove{border:0;background:transparent;color:#7188a2;padding:0 2px;font-size:15px}.add-task{display:flex;gap:8px;margin-top:12px}.add-task input{min-width:0;flex:1}.field{width:100%;background:#081524;border:1px solid #2a4058;border-radius:10px;padding:11px 12px;color:var(--text);outline:none;font-size:12px}.field:focus{border-color:#4e9dff;box-shadow:0 0 0 3px #3988ff18}.form-grid{display:grid;gap:12px}.form-grid label{font-size:11px;color:#b5c6db;display:grid;gap:7px}.form-grid textarea{resize:vertical;min-height:86px}.modal-wrap{position:fixed;inset:0;z-index:10;background:#020813bd;display:none;place-items:center;padding:16px}.modal-wrap.open{display:grid}.modal{width:min(520px,100%);max-height:90vh;overflow:auto;border:1px solid #2d4764;border-radius:18px;background:#0c192a;padding:22px;box-shadow:0 30px 100px #0008}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.modal-head h2{font-size:18px;margin:0}.close{background:transparent;border:0;color:var(--muted);font-size:23px}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.notice{border:1px solid #315b7a;background:#10263c;border-radius:11px;padding:12px;color:#b8d8ef;font-size:11px;line-height:1.6;margin-top:14px}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#e6f7ff;color:#071323;padding:11px 16px;border-radius:10px;font-size:12px;font-weight:700;transition:.2s;z-index:20;box-shadow:0 8px 30px #0005}.toast.show{opacity:1;transform:translate(-50%,0)}.footer{color:#637d9a;font-size:10px;text-align:center;margin-top:45px}.chatbox{display:grid;gap:12px}.chat-result{white-space:pre-wrap;line-height:1.7;font-size:13px;color:#d6e5f5}.chat-note{font-size:11px;color:var(--muted);line-height:1.6}.mobile-nav{display:none}
+@media(max-width:850px){.app{grid-template-columns:1fr}.sidebar{display:none}.mobile-brand{display:flex;align-items:center;gap:9px}.mobile-brand .mark{width:34px;height:34px;font-size:20px;border-radius:10px}.mobile-brand .brand-name{font-size:13px}.main{padding:17px 16px 90px}.topbar{margin-bottom:26px}.hero-orb{width:62px;height:62px;border-radius:20px}.hero-orb:after{font-size:43px}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-layout{grid-template-columns:1fr}.mobile-nav{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;z-index:8;bottom:0;left:0;right:0;background:#081321f2;border-top:1px solid var(--line);padding:7px 8px calc(7px + env(safe-area-inset-bottom));backdrop-filter:blur(15px)}.mobile-nav button{border:0;background:transparent;color:#8fa7c2;font-size:10px;display:grid;justify-items:center;gap:3px;padding:6px}.mobile-nav button.active{color:#8bdcff}.mobile-nav span{font-size:17px}.topbar .crumb{display:none}}
+@media(max-width:520px){.hero{align-items:center}.hero h1{font-size:32px}.hero p{font-size:12px}.hero-orb{display:none}.stats{gap:8px}.stat{padding:12px}.stat .number{font-size:23px}.stat .label{font-size:10px}.project-grid{grid-template-columns:1fr}.project-card p{min-height:0}.section-head{align-items:flex-start}.top-actions .btn{padding:9px 10px}.detail-head{display:block}.detail-head .top-actions{margin-top:12px}.add-task{flex-wrap:wrap}.add-task input{flex-basis:100%}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="mark">L</div><div><div class="brand-name">LIVNAC</div><div class="brand-tag">Ideas in. Real progress out.</div></div></div>
+  <div><div class="nav-label">WORKSPACE</div><nav class="nav">
+    <button class="active" data-view="home"><span class="ico">⌂</span>Overview</button>
+    <button data-view="projects"><span class="ico">▦</span>My projects</button>
+    <button data-view="assistant"><span class="ico">✧</span>Idea assistant</button>
+  </nav></div>
+  <div><div class="nav-label">YOUR SPACE</div><nav class="nav">
+    <button id="exportBtn"><span class="ico">⇩</span>Export my data</button>
+    <button id="aboutBtn"><span class="ico">ⓘ</span>About LIVNAC</button>
+  </nav></div>
+  <div class="side-note"><strong>Small steps. Real progress.</strong><p>LIVNAC helps you organize ideas into clear actions. Your demo projects are saved in this browser.</p></div>
+  <div class="side-bottom">EARLY ACCESS · DEMO BUILD 0.2</div>
+</aside>
+<main class="main">
+  <header class="topbar">
+    <div class="mobile-brand"><div class="mark">L</div><div class="brand-name">LIVNAC</div></div>
+    <div class="crumb" id="breadcrumb">Workspace / Overview</div>
+    <div class="top-actions"><button class="btn ghost" id="exportTop">↧ Export</button><button class="btn primary" id="newProjectTop">＋ New project</button></div>
+  </header>
+
+  <section class="view active" id="view-home">
+    <div class="hero"><div><div class="eyebrow">YOUR PERSONAL PROJECT SPACE</div><h1>Make your next idea<br>happen.</h1><p>Turn what you're imagining into a clear plan, keep track of progress, and take the next step with confidence.</p></div><div class="hero-orb"></div></div>
+    <div class="stats">
+      <div class="stat"><div class="label">Total projects</div><div class="number" id="statTotal">0</div><div class="sub">Ideas you're working on</div></div>
+      <div class="stat"><div class="label">Tasks completed</div><div class="number" id="statDone">0</div><div class="sub">Every step counts</div></div>
+      <div class="stat"><div class="label">Overall progress</div><div class="number" id="statProgress">0%</div><div class="sub">Across all your projects</div></div>
+    </div>
+    <div class="section-head"><div><h2>Your projects</h2><p>Pick up where you left off.</p></div><button class="btn" id="newProjectHome">＋ Create project</button></div>
+    <div class="project-grid" id="homeProjects"></div>
+    <div class="section-head"><div><h2>Start with a direction</h2><p>Choose a starting point for your next idea.</p></div></div>
+    <div class="quick-grid">
+      <button class="quick" data-template="Business"><div class="qicon">↗</div><strong>Build a business</strong><span>Shape a business idea into a practical plan.</span></button>
+      <button class="quick" data-template="Learning"><div class="qicon">⌁</div><strong>Learn a skill</strong><span>Set a learning goal and track your practice.</span></button>
+      <button class="quick" data-template="Creative"><div class="qicon">✳</div><strong>Create something</strong><span>Organize a creative project from start to finish.</span></button>
+      <button class="quick" data-template="Technology"><div class="qicon">⌘</div><strong>Build with tech</strong><span>Break a digital product into smaller steps.</span></button>
+    </div>
+  </section>
+
+  <section class="view" id="view-projects">
+    <div class="hero"><div><div class="eyebrow">YOUR WORKSPACE</div><h1>My projects.</h1><p>All your ideas, plans and next steps in one place.</p></div></div>
+    <div class="project-grid" id="allProjects"></div>
+  </section>
+
+  <section class="view" id="view-detail">
+    <button class="text-btn backline" id="backProjects">← Back to projects</button>
+    <div id="projectDetail"></div>
+  </section>
+
+  <section class="view" id="view-assistant">
+    <div class="hero"><div><div class="eyebrow">LIVNAC IDEA ASSISTANT</div><h1>Give your idea<br>a starting point.</h1><p>Describe what you want to achieve. This demo will turn it into a structured starter plan you can save as a project.</p></div><div class="hero-orb"></div></div>
+    <div class="panel chatbox">
+      <label class="form-grid"><label for="ideaInput">YOUR IDEA</label><textarea class="field" id="ideaInput" placeholder="Example: I want to start a small online design business..." rows="4"></textarea></label>
+      <div class="form-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+        <label>PROJECT TYPE<select class="field" id="ideaType"><option>Business</option><option>Learning</option><option>Creative</option><option>Personal</option><option>Technology</option></select></label>
+        <label>TIMEFRAME<select class="field" id="ideaTime"><option>Flexible</option><option>One week</option><option>One month</option><option>Three months</option></select></label>
+      </div>
+      <div style="display:flex;gap:9px;flex-wrap:wrap"><button class="btn primary" id="generatePlan">✧ Create starter plan</button><button class="btn" id="clearIdea">Clear</button></div>
+      <div id="assistantOutput" class="chat-result"></div>
+      <div class="chat-note">Prototype note: this starter planner uses built-in templates, not a live AI model. Your entries stay in this browser unless you export them.</div>
+    </div>
+  </section>
+
+  <section class="view" id="view-about">
+    <div class="hero"><div><div class="eyebrow">ABOUT THE PROJECT</div><h1>LIVNAC is built<br>around progress.</h1><p>A project companion designed to help people move from an idea to meaningful action.</p></div><div class="hero-orb"></div></div>
+    <div class="panel"><h2>What this version can do</h2><div class="task-list">
+      <div class="task"><span>✓</span><label>Create projects with a title, description and category.</label></div>
+      <div class="task"><span>✓</span><label>Generate starter plans from built-in templates.</label></div>
+      <div class="task"><span>✓</span><label>Add, remove and complete tasks while progress updates.</label></div>
+      <div class="task"><span>✓</span><label>Save projects in your browser and export a backup file.</label></div>
+    </div><div class="notice"><strong>What isn't connected yet:</strong> live AI responses, user accounts, cloud sync and a hosted database. This is an early working prototype, not a deployed AI service. Do not store sensitive information in this demo.</div></div>
+  </section>
+  <div class="footer">LIVNAC · Ideas in. Real progress out. · Early prototype</div>
+</main>
+</div>
+<nav class="mobile-nav">
+  <button class="active" data-view="home"><span>⌂</span>Home</button>
+  <button data-view="projects"><span>▦</span>Projects</button>
+  <button data-view="assistant"><span>✧</span>Assistant</button>
+  <button data-view="about"><span>ⓘ</span>About</button>
+</nav>
+
+<div class="modal-wrap" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal"><div class="modal-head"><h2 id="modalTitle">Create a project</h2><button class="close" id="closeModal" aria-label="Close">×</button></div>
+  <form id="projectForm" class="form-grid">
+    <label>Project name<input class="field" id="projectName" required maxlength="90" placeholder="e.g. Launch my online shop"></label>
+    <label>What do you want to achieve?<textarea class="field" id="projectDescription" maxlength="500" placeholder="Describe your idea in a few sentences..."></textarea></label>
+    <label>Category<select class="field" id="projectCategory"><option>Business</option><option>Learning</option><option>Creative</option><option>Personal</option><option>Technology</option></select></label>
+    <div class="notice">A new project starts with a few suggested tasks. You can edit them any time.</div>
+    <div class="modal-actions"><button type="button" class="btn" id="cancelModal">Cancel</button><button type="submit" class="btn primary">Create project</button></div>
+  </form></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const STORAGE_KEY='livnac_projects_v2';
+const templates={
+ Business:['Clarify the problem your business solves','Describe your ideal customer','Research similar products and alternatives','List the tools and costs you may need','Create a simple first offer','Ask a few people for feedback'],
+ Learning:['Choose one clear learning goal','Find two beginner-friendly learning resources','Create a weekly practice schedule','Complete your first practice session','Review what you have learned','Decide what to practise next'],
+ Creative:['Write a one-sentence creative brief','Collect inspiration and references','Sketch or outline three possible directions','Create a first draft','Review and improve the draft','Share it with someone for feedback'],
+ Personal:['Define what success looks like','Break the goal into small actions','Choose the first action you can do today','Set a realistic weekly routine','Review your progress','Adjust the plan if needed'],
+ Technology:['Describe the user problem','List the three most important features','Sketch the main screens or workflow','Build a small first prototype','Test it with a potential user','Record feedback and choose the next improvement']
+};
+const icons={Business:'↗',Learning:'⌁',Creative:'✳',Personal:'◇',Technology:'⌘'};
+let projects=[];
+try{projects=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');if(!Array.isArray(projects))projects=[]}catch(e){projects=[]}
+let currentId=null;
+const $=id=>document.getElementById(id);
+const safe=(s='')=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(projects));return true}catch(e){toast('Could not save in this browser. Export your data as a backup.');return false}}
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),2400)}
+function makeProject(name,description,category,tasks){
+return {id:'p_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,7),name:name.trim(),description:description.trim(),category,createdAt:new Date().toISOString(),tasks:(tasks||templates[category]||templates.Personal).map((text,i)=>({id:'t_'+i+'_'+Math.random().toString(36).slice(2,5),text,done:false}))}
+}
+function progress(p){return p.tasks.length?Math.round(p.tasks.filter(t=>t.done).length/p.tasks.length*100):0}
+function renderCard(p){const pct=progress(p);return `<article class="project-card"><div class="project-top"><div class="project-icon">${icons[p.category]||'◇'}</div><span class="pill">${safe(p.category)}</span></div><h3>${safe(p.name)}</h3><p>${safe(p.description||'Your project is ready for its next step.')}</p><div class="progress-row"><span>${p.tasks.filter(t=>t.done).length} of ${p.tasks.length} tasks complete</span><span>${pct}%</span></div><div class="track"><div class="fill" style="width:${pct}%"></div></div><div class="card-bottom"><button class="text-btn" data-open="${p.id}">Open project →</button><button class="text-btn" data-delete="${p.id}" aria-label="Delete ${safe(p.name)}">Delete</button></div></article>`}
+function render(){
+const total=projects.length,done=projects.reduce((n,p)=>n+p.tasks.filter(t=>t.done).length,0),tasks=projects.reduce((n,p)=>n+p.tasks.length,0);
+$('statTotal').textContent=total;$('statDone').textContent=done;$('statProgress').textContent=tasks?Math.round(done/tasks*100)+'%':'0%';
+const cards=projects.length?projects.slice().reverse().map(renderCard).join(''):'<div class="empty">No projects yet. Create your first project and turn an idea into action.</div>';
+$('homeProjects').innerHTML=cards;$('allProjects').innerHTML=cards;
+if(currentId&&$('view-detail').classList.contains('active'))renderDetail();
+}
+function switchView(name){
+document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+const view=$('view-'+name);if(view)view.classList.add('active');
+document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));
+const labels={home:'Overview',projects:'My projects',detail:'Project details',assistant:'Idea assistant',about:'About LIVNAC'};
+$('breadcrumb').textContent='Workspace / '+(labels[name]||name);
+window.scrollTo({top:0,behavior:'smooth'});
+}
+function openModal(category='Business',name='',description=''){
+$('projectForm').reset();$('projectCategory').value=category;$('projectName').value=name;$('projectDescription').value=description;
+$('projectModal').classList.add('open');setTimeout(()=>$('projectName').focus(),80)
+}
+function closeModal(){$('projectModal').classList.remove('open')}
+function openProject(id){currentId=id;renderDetail();switchView('detail')}
+function renderDetail(){
+const p=projects.find(x=>x.id===currentId);if(!p){switchView('projects');return}
+const pct=progress(p);
+$('projectDetail').innerHTML=`<div class="detail-head"><div><span class="pill">${safe(p.category)}</span><h1 style="margin-top:12px">${safe(p.name)}</h1><p>${safe(p.description||'Keep moving forward one step at a time.')}</p></div><div class="top-actions"><button class="btn" id="exportOne">Export</button><button class="btn" id="deleteCurrent">Delete</button></div></div><div class="detail-layout"><section class="panel"><div class="section-head" style="margin-top:0"><div><h2>Project tasks</h2><p>Check off steps as you complete them.</p></div><span class="pill">${pct}% done</span></div><div class="track" style="margin-bottom:16px"><div class="fill" style="width:${pct}%"></div></div><div class="task-list">${p.tasks.map(t=>`<div class="task ${t.done?'done':''}"><input type="checkbox" data-task="${t.id}" ${t.done?'checked':''} aria-label="Complete ${safe(t.text)}"><label>${safe(t.text)}</label><button class="remove" data-remove-task="${t.id}" aria-label="Remove task">×</button></div>`).join('')||'<div class="empty">No tasks yet. Add your first task below.</div>'}</div><form class="add-task" id="addTaskForm"><input class="field" id="newTaskText" maxlength="180" required placeholder="Add a new task..."><button class="btn primary" type="submit">＋ Add task</button></form></section><aside class="panel"><h2>Project snapshot</h2><div class="stat" style="padding:14px"><div class="label">Completion</div><div class="number">${pct}%</div><div class="sub">${p.tasks.filter(t=>t.done).length} completed · ${p.tasks.filter(t=>!t.done).length} remaining</div></div><div style="margin-top:16px"><div class="label" style="font-size:11px;color:var(--muted)">SUGGESTED NEXT STEP</div><p style="font-size:12px;line-height:1.6">${safe((p.tasks.find(t=>!t.done)||{}).text||'All current tasks are complete. Celebrate your progress and decide what comes next.')}</p></div><div class="notice">Your project is saved in this browser. Use Export to keep a backup or move your data manually.</div></aside></div>`;
+$('addTaskForm').addEventListener('submit',e=>{e.preventDefault();const text=$('newTaskText').value.trim();if(!text)return;p.tasks.push({id:'t_'+Date.now().toString(36),text,done:false});save();render();renderDetail();toast('Task added')});
+$('projectDetail').querySelectorAll('[data-task]').forEach(el=>el.addEventListener('change',()=>{const t=p.tasks.find(t=>t.id===el.dataset.task);if(t){t.done=el.checked;save();render();renderDetail()}}));
+$('projectDetail').querySelectorAll('[data-remove-task]').forEach(el=>el.addEventListener('click',()=>{p.tasks=p.tasks.filter(t=>t.id!==el.dataset.removeTask);save();render();renderDetail();toast('Task removed')}));
+$('deleteCurrent').addEventListener('click',()=>deleteProject(p.id));
+$('exportOne').addEventListener('click',()=>downloadJSON({product:'LIVNAC',exportedAt:new Date().toISOString(),project:p},'livnac-project.json'));
+}
+function deleteProject(id){const p=projects.find(x=>x.id===id);if(!p)return;if(!confirm('Delete "'+p.name+'"? This cannot be undone unless you exported a backup.'))return;projects=projects.filter(x=>x.id!==id);if(currentId===id)currentId=null;save();render();switchView('projects');toast('Project deleted')}
+function downloadJSON(data,filename){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);toast('Export ready')}
+function generatePlan(){
+const idea=$('ideaInput').value.trim();if(!idea){toast('Write a little about your idea first');$('ideaInput').focus();return}
+const category=$('ideaType').value;const timeframe=$('ideaTime').value;const steps=templates[category]||templates.Personal;
+const output=`YOUR STARTER PLAN\n\nGoal\n${idea}\n\nSuggested first steps\n${steps.map((s,i)=>(i+1)+'. '+s).join('\n')}\n\nSuggested pace\n${timeframe==='Flexible'?'Choose a pace that fits your schedule and review it weekly.':`Use ${timeframe.toLowerCase()} as a first planning window. Adjust it if the steps need more time.`}\n\nYour first move\nStart with: ${steps[0]}. Keep the first version small, then improve it as you learn.`;
+$('assistantOutput').textContent=output;
+let btn=document.getElementById('savePlanBtn');if(!btn){btn=document.createElement('button');btn.id='savePlanBtn';btn.className='btn primary';btn.textContent='＋ Save as project';$('assistantOutput').insertAdjacentElement('afterend',btn)}
+btn.onclick=()=>{projects.push(makeProject(idea.length>54?idea.slice(0,51)+'…':idea,idea,category,steps));save();render();btn.remove();$('assistantOutput').textContent='Your starter plan has been saved as a project. Open My projects to keep working on it.';toast('Starter plan saved')};
+}
+function handleClick(e){
+const open=e.target.closest('[data-open]');if(open){openProject(open.dataset.open);return}
+const del=e.target.closest('[data-delete]');if(del){deleteProject(del.dataset.delete);return}
+const nav=e.target.closest('[data-view]');if(nav){switchView(nav.dataset.view);return}
+const templ=e.target.closest('[data-template]');if(templ){openModal(templ.dataset.template);return}
+}
+document.addEventListener('click',handleClick);
+$('newProjectTop').onclick=$('newProjectHome').onclick=()=>openModal();
+$('closeModal').onclick=$('cancelModal').onclick=closeModal;
+$('projectModal').addEventListener('click',e=>{if(e.target===$('projectModal'))closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+$('projectForm').addEventListener('submit',e=>{e.preventDefault();const name=$('projectName').value.trim();if(!name)return;const p=makeProject(name,$('projectDescription').value,$('projectCategory').value);projects.push(p);save();render();closeModal();openProject(p.id);toast('Project created')});
+$('backProjects').onclick=()=>switchView('projects');
+$('generatePlan').onclick=generatePlan;
+$('clearIdea').onclick=()=>{$('ideaInput').value='';$('assistantOutput').textContent='';const b=$('savePlanBtn');if(b)b.remove()};
+function exportAll(){downloadJSON({product:'LIVNAC',version:'0.2',exportedAt:new Date().toISOString(),projects},'livnac-backup.json')}
+$('exportBtn').onclick=$('exportTop').onclick=exportAll;
+$('aboutBtn').onclick=()=>switchView('about');
+render();
+</script>
+</body>
+</html>
